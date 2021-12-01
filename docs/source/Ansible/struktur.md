@@ -4,18 +4,18 @@ Die grundlegende Struktur des Playbooks ist wie folgt:
 $ tree
 .
 |-- README.md
-|-- ansible-command.sh			#Contains the command to apply the Ansible Playbook
-|-- ansible-testing.sh			#Contains the command to run the Ansible Playbook in check mode
-|-- group_vars				#Contains variables
-|-- hosts				#Contains the IP address or TLD of the server
-|-- roles				#Folder containing the Ansible roles
+|-- ansible-command.sh
+|-- ansible-testing.sh
+|-- group_vars
+|-- hosts
+|-- roles
 |   |-- apt				#The apt role, as an example for a role
-|   |   |-- files			#Files for the apt role
+|   |   |-- files
 |   |   |-- tasks			#Directory containing tasks
-|   |   |   |-- main.yml		#Task file, in this case all other files in "other_yml" are included
+|   |   |   |-- main.yml		#Task file, in this case includes more
 |   |   |   `-- other_yml
 |   |   |       `-- apt.yml		#Task file
-|-- site.yml				#Configures what roles to apply and some after things
+|-- site.yml
 ```
 
 Das Repository zum Playbook enthÃlt ein Verzeichnis fÃr Variablen und ein Verzeichnis fÃ¼r Rolle.
