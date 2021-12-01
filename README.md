@@ -1,25 +1,25 @@
 # Matrix-Betriebshandbuch
 
-Dieses Betriebshandbuch besteht aus ``.rst/.md`` Dateien, die in den Unterordnern von ``docs/source/`` zu finden sind.  
+Dieses Betriebshandbuch besteht aus ``.md``-Dateien, die in den Unterordnern von ``docs/source/`` zu finden sind.  
 
 ## Verzeichnisstruktur 
 
 ```bash
 .
-├── README.md                   <- diese Datei
-├── Dockerfile                  <- das Dockerfile
-├── docker-compose.yml          <- Compose-file für automatischen Build und Publish des Containers
-├── test-changes-locally.sh     <- Script welches mit dem Dockerfile einen Container baut und darin das Handbuch baut
-└── docs
-    ├── Makefile                <- Makefile von Sphinx
-    ├── build                   <- Enthält das Ergebnis und die Files die beim Build entstehen, leer und nicht versionskontrolliert
-    └── source                  <- Enthält die Quellen für das Handbuch, aufgeteilt in Verzeichnisse für einzelne Kapitel
-        ├── Allgemein           <- Eines der Kapitel
-        ├── pictures            <- Die Bilder für das Handbuch
-        ├── conf.py             <- Konfigurationsdatei, enthält unter anderem Einstellungen für das HTML-Theme
-        ├── index.rst           <- Index-Datei für das Project, darin werden die einzelnen Kapitel inkludiert
-        ├── pictures            <- Bilder für das Projekt
-        └── darc-logo.png       <- DARC-Logo für Startseite der Dokumentation
+--------- README.md                   <- diese Datei
+--------- Dockerfile                  <- das Dockerfile
+--------- docker-compose.yml          <- Compose-file für automatischen Build und Publish des Containers
+--------- test-changes-locally.sh     <- Script welches mit dem Dockerfile einen Container baut und darin das Handbuch baut
+--------- docs
+    |-------- Makefile                <- Makefile von Sphinx
+    |-------- build                   <- Enthält das Ergebnis und die Files die beim Build entstehen, leer und nicht versionskontrolliert
+    |-------- source                  <- Enthält die Quellen für das Handbuch, aufgeteilt in Verzeichnisse für einzelne Kapitel
+        |-------- Allgemein           <- Eines der Kapitel
+        |-------- pictures            <- Die Bilder für das Handbuch
+        |-------- conf.py             <- Konfigurationsdatei, enthält unter anderem Einstellungen für das HTML-Theme
+        |-------- index.rst           <- Index-Datei für das Project, darin werden die einzelnen Kapitel inkludiert
+        |-------- pictures            <- Bilder für das Projekt
+        |-------- darc-logo.png       <- DARC-Logo für die Startseite der Dokumentation
 ```
 
 ## Design Guide
@@ -34,24 +34,24 @@ Jedem Kapitel liegt eine Datei `main.md` zugrunde, in dieser können die weitere
 \# Kapitel
 
 \## Unterkapitel 1  
-\`\`\`{include} unterkapitel1&#46;md  
+\`\`\`{include} unterkapitel1.md  
 \`\`\`
 
 \## Unterkapitel 2  
-\`\`\`{include} unterkapitel2&#46;md  
+\`\`\`{include} unterkapitel2.md  
 \`\`\`
 
 \## Großes Unterkapitel 3  
-\`\`\`{include} unterkapitel3_1&#46;md  
+\`\`\`{include} unterkapitel3.md  
 \`\`\`
 
-\`\`\`{include} unterkapitel3_1&#46;md  
+\`\`\`{include} unterkapitel3.md  
 \`\`\`
 
 -------
 
-Im Falle eines zu inkludierenden Kapitels mit vielen weiteren Includes empfiehlt es sich diese Dateien in einem eigenen Ordner zu
-sammeln und im Include-Statement den (relativen) Pfad zu übergeben.
+Im Falle eines zu inkludierenden Kapitels mit vielen weiteren Include-Statements empfiehlt es sich diese Dateien in einem eigenen Ordner zu
+sammeln und mit dem Include-Statement den (relativen) Pfad zu übergeben.
 
 ## Hinweise / Warnungen
 
@@ -64,7 +64,7 @@ Um bestimmte Punkte farblich besonders hervorzuheben, können die folgenden *adm
 
 ![](.repository/pictures/example-admonitions.png)
 
-Die *admonitions* können folgendermßen in Markdown-Dateien eingebunden werden:
+Die *admonitions* können folgendermaßen in Markdown-Dateien eingebunden werden:
 
 ```
 :::{admonition} Anmerkung
@@ -87,7 +87,7 @@ Hier steht ein Hinweis.
 Hier steht eine Warnung.
 :::
 ```
-> Die *admonitions* sind spezifisch zu Sphinx und werden von den meisten Markdown-Editoren nicht korrekt dargestellt.
+> Die *admonition*-Statements sind spezifisch zu Sphinx und werden von den meisten Markdown-Editoren nicht korrekt dargestellt.
 
 ## RST-Syntax
 
@@ -97,7 +97,7 @@ Die weitere Syntax kann zum Beispiel diesem Cheatsheet entnommen werden: https:/
 
 ## Versionierung
 
-Bei der Versionierung wird zwischen Minor Releases und Major Releases unterschieden, wobei 0.1 ein major release und 0.1.1 ein Minor Release ist.
+Bei der Versionierung wird zwischen Minor Releases und Major Releases unterschieden, wobei 0.1 ein Major Release und 0.1.1 ein Minor Release ist.
 
 Die Version kann in `docs/source/conf.py` festgelegt werden.
 
@@ -107,17 +107,17 @@ Das aktuelle Datum wird in `docs/source/index.rst` festgelegt.
 
 ### Vorraussetzungen
 
-Unter Debian m�ssen folgende Pakete installiert werden:
+Unter Debian müssen folgende Pakete installiert werden:
 
 `apt install sphinx-common python3-pip latexmk texlive-latex-extra texlive-lang-german`
 
-Außerdem m�ßen folgende Python-Pakete installiert werden:
+Außerdem müßen folgende Python-Pakete installiert werden:
 
-�python3 -m pip install myst-parser rinohtype sphinx-rtd-theme
+Âpython3 -m pip install myst-parser rinohtype sphinx-rtd-theme
 
-### Web-Version: Rendern manuell
+### Web-Version: Manuelles rendern
 
-Um das Web-basiertes Handbuch zu rendern wird wahlweise `make` oder `docker-compose` verwendet.  
+Um das Web-basierte Handbuch zu rendern wird wahlweise `make` oder `docker-compose` verwendet.  
 
 Nachdem das Repository geklont wurde kann mit dem Kommando `make html` im Verzeichnis *docs* die Web-Version gebaut werden.
 
@@ -125,7 +125,8 @@ Alternativ kann mit ``docker-compose up -d --build`` der Container gestartet wer
 
 ### Web-Version: Persönliche Version
 
-Um einen eigenen Container zu deployen, um sich seine gemachten Änderungen im Vorfeld anschauen zu können, kann das Skript ``tools/test-changes-locally.sh`` verwendet werden.  
+Um einen eigenen Container zu deployen, um sich Änderungen im Vorfeld anschauen zu können, kann das Skript ``tools/test-changes-locally.sh`` verwendet werden.  
+
 Das Skript erstellt ein eigenes Docker-Image und erstellt daraus einen (personalisierten) Container:
 
 ```bash
@@ -158,7 +159,8 @@ The PDF document is available at:
 >> http://127.0.0.1:13000/pdf/Matrix-Betriebshandbuch.pdf <<
 ```
 
-Das Betriebshandbuch im PDF Format ist über den angegebenen Link im Browser abrufbar nachdem ein dedizierter Container mit dem folgenden script gestartet wurde:
+Das Betriebshandbuch im PDF-Format ist über den angegebenen Link im Browser abrufbar nachdem ein dedizierter Container mit dem folgenden Script gestartet wurde:
+
 ```bash
 bash tools/create-pdf.sh
 ```
