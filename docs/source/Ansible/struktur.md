@@ -15,9 +15,9 @@ $ tree
 |   |   |   |-- main.yml		#Task file, in this case all other files in "other_yml" are included
 |   |   |   `-- other_yml
 |   |   |       `-- apt.yml		#Task file
-`-- site.yml				#Configures what roles to apply and some after things
+|-- site.yml				#Configures what roles to apply and some after things
 ```
 
-Das Repository zum Playbook enthﾃlt ein Verzeichnis fﾃr Variablen und ein Verzeichnis fﾃｼr Rolle.
+Das Repository zum Playbook enthﾃネt ein Verzeichnis fﾃビ Variablen und ein Verzeichnis fﾃδｼr Rolle.
 
-Jeder der Rollen enthﾃlt zu einer bestimmten Thematik zusammengefasste Tasks. So enthﾃlt die Rolle `apt` zum Beispiel Tasks zur Configuration von `apt` und `unattended-upgrades`.
+Jeder der Rollen enthﾃネt zu einer bestimmten Thematik zusammengefasste Tasks. So enthﾃネt die Rolle `apt` zum Beispiel Tasks zur Configuration von `apt` und `unattended-upgrades`.
