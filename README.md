@@ -2,9 +2,6 @@
 
 Dieses Betriebshandbuch besteht aus ``.rst/.md`` Dateien, die in den Unterordnern von ``docs/source/`` zu finden sind.  
 
-Das vollständig gerenderte Betriebshandbuch ist unter der folgenden Adresse erreichbar: 
-> http://127.0.0.1:13000/
-
 ## Verzeichnisstruktur 
 
 ```bash
@@ -27,11 +24,11 @@ Das vollständig gerenderte Betriebshandbuch ist unter der folgenden Adresse err
 
 ## Design Guide
 
-Die Kapitelstruktur wird durch die `index.rst` Datei im *source* Verzeichnis festgelegt, die Nummerierung der Kapitel erfolgt automatisch.
+Die Kapitelstruktur wird durch die Datei `index.rst` im *source*-Verzeichnis festgelegt, die Nummerierung der Kapitel erfolgt automatisch.
 
-Kommt ein neues Thema hinzu sollte dies, soweit möglich, einem bereits bestehenden Kapitel zuordnen.
+Kommt ein neues Thema hinzu sollte dies, soweit möglich, einem bereits bestehenden Kapitel ugeordnet werden.
 
-Jedem Kapitel liegt eine `main.md` Datei zugrunde, in dieser können die weiteren Unterkapitel inkludiert werden, wie im folgenden Beispiel:
+Jedem Kapitel liegt eine Datei `main.md` zugrunde, in dieser können die weiteren Unterkapitel inkludiert werden, wie im folgenden Beispiel:
 
 -------
 \# Kapitel
@@ -53,10 +50,10 @@ Jedem Kapitel liegt eine `main.md` Datei zugrunde, in dieser können die weitere
 
 -------
 
-Im Falle eines zu inkludierenden Kapitels mit vielen weiteren Includes, empfiehlt es sich, diese Dateien in einem eigenen Ordner zu
+Im Falle eines zu inkludierenden Kapitels mit vielen weiteren Includes empfiehlt es sich diese Dateien in einem eigenen Ordner zu
 sammeln und im Include-Statement den (relativen) Pfad zu übergeben.
 
-## Hinweise/Warnungen
+## Hinweise / Warnungen
 
 Um bestimmte Punkte farblich besonders hervorzuheben, können die folgenden *admonition* Klassen verwendet werden:
 
@@ -67,7 +64,7 @@ Um bestimmte Punkte farblich besonders hervorzuheben, können die folgenden *adm
 
 ![](.repository/pictures/example-admonitions.png)
 
-Die *admonitions* können folgendermaßen in Markdown-Dateien eingebunden werden:
+Die *admonitions* können folgendermßen in Markdown-Dateien eingebunden werden:
 
 ```
 :::{admonition} Anmerkung
@@ -90,7 +87,7 @@ Hier steht ein Hinweis.
 Hier steht eine Warnung.
 :::
 ```
-> Die *admonitions* werden im gängigen Markdown Previewern (z.B. in VSCode) nicht korrekt gerendert, das ist eine Sphinx-Spezialität.
+> Die *admonitions* sind spezifisch zu Sphinx und werden von den meisten Markdown-Editoren nicht korrekt dargestellt.
 
 ## RST-Syntax
 
@@ -100,21 +97,33 @@ Die weitere Syntax kann zum Beispiel diesem Cheatsheet entnommen werden: https:/
 
 ## Versionierung
 
-Bei der Versionierung wird zwischen minor und major releases unterschieden, wobei 0.9 ein major release, 0.9.1 ein minor release ist.
-Die Version kann in docks/source/conf.py festgelegt werden.
-Das aktuelle Datunm kann indocs/source/index.rst festgelegt werden.
+Bei der Versionierung wird zwischen Minor Releases und Major Releases unterschieden, wobei 0.1 ein major release und 0.1.1 ein Minor Release ist.
 
-## Web-Version: Rendern und Update automatisiert
+Die Version kann in `docs/source/conf.py` festgelegt werden.
 
-Der Docker Container wird über eine CI/CD Pipeline mithilfe eines Gitlab Runners bei jedem Push in das Remote Repository automatisch neu gebaut, ein manueller Rebuild ist normalerweise nicht notwendig.  
-Ein erfolgreicher/fehlerhafter Build ist auf der Übersichtsseite des Repositories zu sehen.
+Das aktuelle Datum wird in `docs/source/index.rst` festgelegt.
 
-## Web-Version: Rendern manuell
+## Rendern des Handbuchs
 
-Um das Web-basiertes Handbuch zu rendern wird *docker-compose* verwendet.  
-Nachdem das Repository geklont wurde, kann mit dem Kommando ``docker-compose up -d --build`` der Container gestartet werden, der anschließend auf dem Port 13000 den Service bereitstellt.
+### Vorraussetzungen
 
-## Web-Version: Persönliche Version
+Unter Debian m�ssen folgende Pakete installiert werden:
+
+`apt install sphinx-common python3-pip latexmk texlive-latex-extra texlive-lang-german`
+
+Außerdem m�ßen folgende Python-Pakete installiert werden:
+
+�python3 -m pip install myst-parser rinohtype sphinx-rtd-theme
+
+### Web-Version: Rendern manuell
+
+Um das Web-basiertes Handbuch zu rendern wird wahlweise `make` oder `docker-compose` verwendet.  
+
+Nachdem das Repository geklont wurde kann mit dem Kommando `make html` im Verzeichnis *docs* die Web-Version gebaut werden.
+
+Alternativ kann mit ``docker-compose up -d --build`` der Container gestartet werden, der anschließend auf dem Port 13000 den Service bereitstellt.
+
+### Web-Version: Persönliche Version
 
 Um einen eigenen Container zu deployen, um sich seine gemachten Änderungen im Vorfeld anschauen zu können, kann das Skript ``tools/test-changes-locally.sh`` verwendet werden.  
 Das Skript erstellt ein eigenes Docker-Image und erstellt daraus einen (personalisierten) Container:
@@ -131,7 +140,7 @@ View your copy at:
 >> http://127.0.0.1:13030 <<
 ```
 
-## PDF-Version: Rendern
+### PDF-Version: Rendern
 
 Die PDF-Version des Betriebshandbuchs kann über ein Wrapper-Skript generiert werden:
 
