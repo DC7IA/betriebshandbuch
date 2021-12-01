@@ -18,6 +18,6 @@ $ tree
 |-- site.yml
 ```
 
-Das Repository zum Playbook enthÃlt ein Verzeichnis fÃr Variablen und ein Verzeichnis fÃ¼r Rolle.
+Das Repository zum Playbook enthält ein Verzeichnis für Variablen und ein Verzeichnis für Rollen.
 
-Jeder der Rollen enthÃlt zu einer bestimmten Thematik zusammengefasste Tasks. So enthÃlt die Rolle `apt` zum Beispiel Tasks zur Configuration von `apt` und `unattended-upgrades`.
+Jeder der Rollen enthält zu einer bestimmten Thematik zusammengefasste Tasks. So enthält die Rolle `apt` zum Beispiel Tasks zur Configuration von `apt` und `unattended-upgrades`.
