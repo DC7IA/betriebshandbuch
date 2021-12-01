@@ -1,6 +1,6 @@
 # Ansible
 
-Das Management der Konfiguration des Matrix-Servers wird per `git` durchgefÃhrt.
+Das Management der Konfiguration des Matrix-Servers wird per `git` durchgeführt.
 
 ## Struktur
 
