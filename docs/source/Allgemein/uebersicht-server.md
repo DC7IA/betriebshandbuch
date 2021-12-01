@@ -1,4 +1,4 @@
-Die folgende Aufstellung zeigt eine Übersicht der genutzten Server und deren Funktion innerhalb der Plattform.
+Die folgende Aufstellung zeigt eine Übersicht der genutzten Server und deren Funktion innerhalb der Matrix-Plattform.
 
 ### Matrix-Server
 
