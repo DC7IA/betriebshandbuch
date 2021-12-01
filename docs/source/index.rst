@@ -19,3 +19,4 @@ Dokumentation und Betriebshandbuch zur Matrix-Kommunikationsplattform des DARC.
    :numbered:
    
    Allgemein/main
+   Ansible/main
