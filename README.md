@@ -6,20 +6,20 @@ Dieses Betriebshandbuch besteht aus ``.md``-Dateien, die in den Unterordnern von
 
 ```bash
 .
-â”œâ”€â”€ README.md                   <- diese Datei
-â”œâ”€â”€ Dockerfile                  <- das Dockerfile
-â”œâ”€â”€ docker-compose.yml          <- Compose-file für automatischen Build und Publish des Containers
-â”œâ”€â”€ test-changes-locally.sh     <- Script welches mit dem Dockerfile einen Container baut und darin das Handbuch baut
-â””â”€â”€ docs
-    â”œâ”€â”€ Makefile                <- Makefile von Sphinx
-    â”œâ”€â”€ build                   <- Enthält das Ergebnis und die Files die beim Build entstehen, leer und nicht versionskontrolliert
-    â””â”€â”€ source                  <- Enthält die Quellen für das Handbuch, aufgeteilt in Verzeichnisse für einzelne Kapitel
-        â”œâ”€â”€ Allgemein           <- Eines der Kapitel
-        â”œâ”€â”€ pictures            <- Die Bilder für das Handbuch
-        â”œâ”€â”€ conf.py             <- Konfigurationsdatei, enthält unter anderem Einstellungen für das HTML-Theme
-        â”œâ”€â”€ index.rst           <- Index-Datei für das Project, darin werden die einzelnen Kapitel inkludiert
-        â”œâ”€â”€ pictures            <- Bilder für das Projekt
-        â””â”€â”€ darc-logo.png       <- DARC-Logo für die Startseite der Dokumentation
+--------- README.md                   <- diese Datei
+--------- Dockerfile                  <- das Dockerfile
+--------- docker-compose.yml          <- Compose-file für automatischen Build und Publish des Containers
+--------- test-changes-locally.sh     <- Script welches mit dem Dockerfile einen Container baut und darin das Handbuch baut
+--------- docs
+    |-------- Makefile                <- Makefile von Sphinx
+    |-------- build                   <- Enthält das Ergebnis und die Files die beim Build entstehen, leer und nicht versionskontrolliert
+    |-------- source                  <- Enthält die Quellen für das Handbuch, aufgeteilt in Verzeichnisse für einzelne Kapitel
+        |-------- Allgemein           <- Eines der Kapitel
+        |-------- pictures            <- Die Bilder für das Handbuch
+        |-------- conf.py             <- Konfigurationsdatei, enthält unter anderem Einstellungen für das HTML-Theme
+        |-------- index.rst           <- Index-Datei für das Project, darin werden die einzelnen Kapitel inkludiert
+        |-------- pictures            <- Bilder für das Projekt
+        |-------- darc-logo.png       <- DARC-Logo für die Startseite der Dokumentation
 ```
 
 ## Design Guide
@@ -34,18 +34,18 @@ Jedem Kapitel liegt eine Datei `main.md` zugrunde, in dieser können die weitere
 \# Kapitel
 
 \## Unterkapitel 1  
-\`\`\`{include} unterkapitel1&#46;md  
+\`\`\`{include} unterkapitel1.md  
 \`\`\`
 
 \## Unterkapitel 2  
-\`\`\`{include} unterkapitel2&#46;md  
+\`\`\`{include} unterkapitel2.md  
 \`\`\`
 
-\## GroÃŸes Unterkapitel 3  
-\`\`\`{include} unterkapitel3_1&#46;md  
+\## Großes Unterkapitel 3  
+\`\`\`{include} unterkapitel3.md  
 \`\`\`
 
-\`\`\`{include} unterkapitel3_1&#46;md  
+\`\`\`{include} unterkapitel3.md  
 \`\`\`
 
 -------
