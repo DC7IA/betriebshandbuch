@@ -11,7 +11,7 @@ DARC Matrix Betriebshandbuch
 
 Dokumentation und Betriebshandbuch zur Matrix-Kommunikationsplattform des DARC.
 
-**Stand: 30.11.2021**
+**Stand: 02.12.2021**
 
 .. toctree::
    :maxdepth: 2
@@ -19,4 +19,6 @@ Dokumentation und Betriebshandbuch zur Matrix-Kommunikationsplattform des DARC.
    :numbered:
    
    Allgemein/main
+   Projektbeschreibung/main
+   Planungsphase/main
    Ansible/main
