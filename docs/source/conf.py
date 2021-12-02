@@ -22,8 +22,7 @@ copyright = '2021, Administrationsteam Matrix'
 author = 'Administrationsteam Matrix'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2'
-
+release = '0.3'
 
 # -- General configuration ---------------------------------------------------
 
