@@ -1,6 +1,6 @@
 # Projektbeschreibung
 
-Im folgenden eine kurze Beschreibung des Projektes.
+Im Folgenden eine kurze Beschreibung des Projektes.
 
 ## IST-Analyse
 

@@ -2,7 +2,7 @@
 
 An dieser Stelle wird die Planung dokumentiert werden.
 
-## Übersicht Server
+## Projektphasen
 
 ```{include} projektphasen.md
 ```
