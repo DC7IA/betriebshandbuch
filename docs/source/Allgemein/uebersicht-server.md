@@ -2,12 +2,10 @@ Die folgende Aufstellung zeigt eine Übersicht der genutzten Server und deren Fu
 
 ### Matrix-Server
 
-Lorem ipsum dolor sit amet
+Auf dem Matrix-Server läuft die Software `synapse` welche den eigentlichen Matrix-Server bereitstellt.
 
-### Element-Server
-
-Lorem ipsum dolor sit amet
+Außerdem wird auf diesem Server die Weboberfläche Element bereitgestellt.
 
 ### Backup-Server
 
-Lorem ipsum dolor sit amet
+Auf dem Backup-Server werden die Backups des Matrix-Server mittels `restic` abgelegt.
