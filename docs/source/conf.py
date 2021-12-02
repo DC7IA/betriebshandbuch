@@ -17,13 +17,12 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'DARC Matrix Betriebshandbuch'
+project = 'Matrix Betriebshandbuch DARC e.V.'
 copyright = '2021, Administrationsteam Matrix'
 author = 'Administrationsteam Matrix'
 
 # The full version, including alpha/beta/rc tags
 release = '0.3'
-
 
 # -- General configuration ---------------------------------------------------
 
@@ -68,7 +67,7 @@ rinoh_documents = [
     dict(
       doc='index',                            # top-level file (index.rst)
       target='Matrix-Betriebshandbuch',       # output file name, suffixed with .pdf
-      title='DARC Matrix-Kommunikationsplattform'       # Title on first page of PDF
+      title='Matrix-Kommunikationsplattform DARC e.V.'       # Title on first page of PDF
       )
 ]
 

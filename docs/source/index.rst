@@ -19,4 +19,6 @@ Dokumentation und Betriebshandbuch zur Matrix-Kommunikationsplattform des DARC.
    :numbered:
    
    Allgemein/main
+   Projektbeschreibung/main
+   Planungsphase/main
    Ansible/main
