@@ -1,1 +1,0 @@
-Im Gegensatz zum jetzigen Zeitpunkt soll in Zukunft die Chat-Plattform den Austausch in den Hamgroups, der Jugend, der Jugendarbeit, der Ausbildung, der Weiterbildung, den Ortsverbänden den Distrikten und in überregionaln Interessengruppen fördern.
