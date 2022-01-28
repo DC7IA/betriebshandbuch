@@ -7,3 +7,7 @@ Das Management der Konfiguration des Matrix-Servers wird per `git` durchgeführt
 ```{include} struktur.md
 ```
 
+## Deployment
+
+```{include} deployment.md
+```
