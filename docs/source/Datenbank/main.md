@@ -2,6 +2,26 @@
 
 Die Datenbank basiert auf Postgres.
 
+## Datenbank wiederherstellen
+
+Nach einem Crash der Datenbank kann der Dump wie folgt wiederhergestellt werden.
+
+Nicht vergessen im dritten Befehl den Pfad korrekten einzusetzen.
+
+```
+sudo -u postgres psql -c "DROP DATABASE synapse-db;"
+sudo -u postgres psql -c "CREATE DATABASE synapse-db ENCODING 'UTF8' LC_COLLATE='C' LC_CTYPE='C' template=template0 OWNER synapse_db_user;"
+sudo -u postgres psql synapse-db < /mnt/restic/snapshots/2022-08-29T22\:34\:16+02\:00/opt/db_dumps/db-dump-synapse-db.sql
+```
+
+### Hinweis
+
+Falls der Dump aus dem Backup noch nicht wiederhergestellt wurde:
+
+```
+/opt/scripts/restic/restic-mount.sh
+```
+
 ## Nützliche Abfragen
 
 Nachfolgend nützliche Abfragen. Die Shell wird wie folgt gestartet:
