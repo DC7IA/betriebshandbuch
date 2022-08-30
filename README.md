@@ -113,7 +113,7 @@ Unter Debian müssen folgende Pakete installiert werden:
 
 Außerdem müßen folgende Python-Pakete installiert werden:
 
-Âpython3 -m pip install myst-parser rinohtype sphinx-rtd-theme
+`python3 -m pip install myst-parser rinohtype sphinx-rtd-theme`
 
 ### Web-Version: Manuelles rendern
 

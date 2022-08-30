@@ -18,11 +18,11 @@ sys.path.insert(0, os.path.abspath('.'))
 # -- Project information -----------------------------------------------------
 
 project = 'Matrix Betriebshandbuch DARC e.V.'
-copyright = '2021, Administrationsteam Matrix'
+copyright = '2022, Administrationsteam Matrix'
 author = 'Administrationsteam Matrix'
 
 # The full version, including alpha/beta/rc tags
-release = '0.4'
+release = '0.5'
 
 # -- General configuration ---------------------------------------------------
 

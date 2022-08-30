@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf /docs/build/doctrees
+rm -rf /docs/build/
 cd docs
 make html
 make latexpdf
