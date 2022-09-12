@@ -25,4 +25,5 @@ Dokumentation und Betriebshandbuch zur Matrix-Kommunikationsplattform des DARC.
    Branching/main
    Ansible/main
    Datenbank/main
+   Mjölnir/main
    
