@@ -22,7 +22,7 @@ copyright = '2022, Administrationsteam Matrix'
 author = 'Administrationsteam Matrix'
 
 # The full version, including alpha/beta/rc tags
-release = '0.6'
+release = '0.7'
 
 # -- General configuration ---------------------------------------------------
 
